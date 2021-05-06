@@ -30,8 +30,8 @@ namespace LogicalSchemeInterpretor
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,22 +41,12 @@ namespace LogicalSchemeInterpretor
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.panel1.Location = new System.Drawing.Point(824, 284);
+            this.panel1.Location = new System.Drawing.Point(620, 301);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 150);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseMove);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.GreenYellow;
-            this.panel2.Location = new System.Drawing.Point(698, 97);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 127);
-            this.panel2.TabIndex = 0;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseMove);
             // 
             // button1
             // 
@@ -66,6 +56,16 @@ namespace LogicalSchemeInterpretor
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel2.Location = new System.Drawing.Point(546, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(178, 127);
+            this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseMove);
             // 
             // Form1
             // 
