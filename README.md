@@ -1,4 +1,4 @@
-# -------------------LogicalSchemeInterpretor-----------------------
+# ----------------LogicalSchemeInterpretor--------------------
 
 # THINGS DONE:
 - Expression
