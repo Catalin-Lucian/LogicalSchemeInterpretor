@@ -1,6 +1,6 @@
-# LogicalSchemeInterpretor
+# ----------------LogicalSchemeInterpretor--------------------
 
-# THINGS DONE
+# THINGS DONE:
 - Expression
 - BasicOP
 - RelationalOP
