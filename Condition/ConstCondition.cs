@@ -1,23 +1,22 @@
 ﻿namespace LogicalSchemeInterpretor
 {
-    public class ConstValue : IExpression
+    class ConstCondition : ICondition
     {
-        private double _value;
-        public ConstValue(double value)
+        private bool _value;
+
+        public ConstCondition(bool value)
         {
             _value = value;
         }
 
-
-        public double Value
+        public bool Value
         {
             get => _value;
             set => _value = value;
         }
-
-        public double Execute()
+        public bool ExecuteCondition()
         {
-            return _value;
+            return Value;
         }
     }
 }

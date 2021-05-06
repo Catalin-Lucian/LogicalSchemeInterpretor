@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Condition\Condition.cs" />
+    <Compile Include="Condition\ConstCondition.cs" />
     <Compile Include="Condition\ICondition.cs" />
+    <Compile Include="Condition\NegCondition.cs" />
     <Compile Include="Expression\ConstValue.cs" />
     <Compile Include="Expression\Expression.cs" />
     <Compile Include="Expression\IExpression.cs" />

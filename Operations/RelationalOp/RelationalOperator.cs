@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicalSchemeInterpretor
 {
-    class RelationalOperator:IRelationalOperator
+    class RelationalOperator : IRelationalOperator
     {
         private String _operator;
-        public RelationalOperator(String opert)
+        public RelationalOperator(String operator_)
         {
-            _operator = opert;
+            _operator = operator_;
         }
 
-        public String _Operator
+        public String Operator_
         {
             get => _operator;
             set => _operator = value;
@@ -22,7 +18,24 @@ namespace LogicalSchemeInterpretor
 
         public bool ExecuteCondition(IExpression firstExpression, IExpression secondExpression)
         {
-            throw new NotImplementedException();
+            switch (Operator_)
+            {
+                case "<":
+                    return firstExpression.Execute() < secondExpression.Execute();
+                case "<=":
+                    return firstExpression.Execute() <= secondExpression.Execute();
+                case "==":
+                    return firstExpression.Execute() == secondExpression.Execute();
+                case ">":
+                    return firstExpression.Execute() > secondExpression.Execute();
+                case ">=":
+                    return firstExpression.Execute() >= secondExpression.Execute();
+                case "!=":
+                    return firstExpression.Execute() != secondExpression.Execute();
+                default:
+                    return false;
+            }
+
         }
     }
 }

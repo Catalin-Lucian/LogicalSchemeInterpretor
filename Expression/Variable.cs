@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicalSchemeInterpretor
 {
     public class Variable : IExpression
     {
         private double _value;
-        private readonly String _name;
+        private String _name;
 
-        public  Variable(String name)
+        public Variable(String name)
         {
             _name = name;
         }
@@ -25,11 +21,12 @@ namespace LogicalSchemeInterpretor
         public String Name
         {
             get => _name;
+            set => _name = value;
         }
 
         public double Execute()
         {
-            return _value;
+            return Value;
         }
     }
 }
