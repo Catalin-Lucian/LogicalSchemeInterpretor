@@ -14,7 +14,7 @@ namespace LogicalSchemeInterpretor
             _operator = oper;
         }
 
-        public String _Operator
+        public String Operator_
         {
             get => _operator;
             set => _operator = value;
@@ -22,7 +22,22 @@ namespace LogicalSchemeInterpretor
 
         public double ExecuteOperation(IExpression firstTerm, IExpression secondTerm)
         {
-            throw new NotImplementedException();
+            switch (_operator)
+            {
+                case "+":
+                    return firstTerm.Execute() + secondTerm.Execute();
+                case "-":
+                    return firstTerm.Execute() - secondTerm.Execute();
+                case "*":
+                    return firstTerm.Execute() * secondTerm.Execute();
+                case "/":
+                    if (secondTerm.Execute() != 0)
+                        return firstTerm.Execute() / secondTerm.Execute();
+                    else
+                        return 0;
+                default:
+                    return 0;
+            }
         }
     }
 }

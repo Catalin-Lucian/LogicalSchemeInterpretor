@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LogicalSchemeInterpretor
 {
-    public interface IExpressionLeaf:IExpression
+    public interface IRelationalOperator
     {
+        bool ExecuteCondition(IExpression firstExpression, IExpression secondExpression);
     }
 }

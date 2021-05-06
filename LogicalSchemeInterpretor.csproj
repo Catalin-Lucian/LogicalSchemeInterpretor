@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Condition\ICondition.cs" />
+    <Compile Include="Expression\ConstValue.cs" />
+    <Compile Include="Expression\Expression.cs" />
     <Compile Include="Expression\IExpression.cs" />
-    <Compile Include="Expression\IExpressionComposite.cs" />
-    <Compile Include="Expression\IExpressionLeaf.cs" />
+    <Compile Include="Expression\Variable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,8 @@
     </Compile>
     <Compile Include="Operations\BasicOp\IOperator.cs" />
     <Compile Include="Operations\BasicOp\Operator.cs" />
+    <Compile Include="Operations\RelationalOp\IRelationalOperator.cs" />
+    <Compile Include="Operations\RelationalOp\RelationalOperator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -85,8 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Operations\RelationalOp\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
