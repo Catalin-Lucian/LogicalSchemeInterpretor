@@ -31,5 +31,7 @@ namespace LogicalSchemeInterpretor
                 pn.Top = e.Y + pn.Top - MouseDownLocation.Y;
             }
         }
+
+       
     }
 }
