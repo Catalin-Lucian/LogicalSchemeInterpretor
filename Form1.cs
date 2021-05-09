@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace LogicalSchemeInterpretor
 {
@@ -32,6 +33,19 @@ namespace LogicalSchemeInterpretor
             }
         }
 
-       
+        private void panelDrawing_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Validated(object sender, System.EventArgs e)
+        {
+            panelDrawing.Focus();
+        }
+
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
+            System.Console.WriteLine("focused");
+        }
     }
 }
