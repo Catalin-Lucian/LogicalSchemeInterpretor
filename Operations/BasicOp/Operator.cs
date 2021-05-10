@@ -4,13 +4,13 @@ namespace LogicalSchemeInterpretor
 {
     public class Operator : IOperator
     {
-        private String _operator;
+        private string _operator;
         public Operator(String oper)
         {
             _operator = oper;
         }
 
-        public String Operator_
+        public string Operator_
         {
             get => _operator;
             set => _operator = value;
