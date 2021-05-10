@@ -27,10 +27,7 @@ namespace LogicalSchemeInterpretor
                 case "*":
                     return firstTerm.Execute() * secondTerm.Execute();
                 case "/":
-                    if (secondTerm.Execute() != 0)
-                        return firstTerm.Execute() / secondTerm.Execute();
-                    else
-                        return 0;
+                    return firstTerm.Execute() / secondTerm.Execute();
                 default:
                     return 0;
             }
