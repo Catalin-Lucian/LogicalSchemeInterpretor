@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicalSchemeInterpretor.CommandTypes
 {
-    interface ICommandType
+    public interface ICommandType
     {
         public void Execute();
         public bool GetNext();

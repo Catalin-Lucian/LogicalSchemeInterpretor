@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using LogicalSchemeInterpretor.Commands;
+using System.Collections.Generic;
 
 namespace LogicalSchemeInterpretor.VarConfig
 {
@@ -30,5 +31,6 @@ namespace LogicalSchemeInterpretor.VarConfig
         {
             _listOfVariables.Remove(variable);
         }
+
     }
 }

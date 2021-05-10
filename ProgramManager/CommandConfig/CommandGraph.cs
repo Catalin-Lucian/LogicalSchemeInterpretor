@@ -14,11 +14,13 @@ namespace LogicalSchemeInterpretor.CommandConfig
 
         public Hashtable Graph {
             get => _graph;
-            set => _graph = value;
         }
-        public List<ICommand> CommandList { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); }
+        public List<ICommand> CommandList {
+            get {
+                List<ICommand> myList = (List<ICommand>)_graph.Keys;
+                return myList;
+            }
+        }
 
         public void AddElement(ICommand command)
         {
@@ -53,7 +55,16 @@ namespace LogicalSchemeInterpretor.CommandConfig
 
         public void RemoveElement(ICommand command)
         {
-            throw new NotImplementedException();
+            if(_graph.ContainsKey(command))
+                _graph.Remove(command);
         }
+
+        public ICommand GetNextElement(ICommand key, bool isNextTrue)
+        {
+            Tuple<ICommand, ICommand> element = (Tuple<ICommand, ICommand>)Graph[key];
+            if (isNextTrue) return element.Item1;
+            else return element.Item2;
+        }
+
     }
 }

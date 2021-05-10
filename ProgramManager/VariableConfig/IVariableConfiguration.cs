@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicalSchemeInterpretor.VarConfig
 {
-    interface IVariableConfiguration
+    public interface IVariableConfiguration
     {
         public void AddElement(Variable variable);
         public void RemoveElement(Variable variable);
