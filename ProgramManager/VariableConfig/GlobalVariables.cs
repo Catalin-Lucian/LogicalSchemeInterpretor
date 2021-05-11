@@ -1,5 +1,4 @@
-﻿using LogicalSchemeInterpretor.Commands;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace LogicalSchemeInterpretor.VarConfig
 {
