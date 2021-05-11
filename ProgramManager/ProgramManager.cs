@@ -1,8 +1,7 @@
-﻿using LogicalSchemeInterpretor.VarConfig;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace LogicalSchemeInterpretor.ProgramManager
+namespace LogicalSchemeInterpretor
 {
     public class ProgramManager
     {

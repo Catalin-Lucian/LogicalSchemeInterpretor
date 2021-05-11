@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LogicalSchemeInterpretor.VarConfig
+namespace LogicalSchemeInterpretor
 {
     public interface IVariableConfiguration
     {
