@@ -1,7 +1,4 @@
-﻿using LogicalSchemeInterpretor.CommandConfig;
-using LogicalSchemeInterpretor.Commands;
-using LogicalSchemeInterpretor.CommandTypes;
-using LogicalSchemeInterpretor.VarConfig;
+﻿using LogicalSchemeInterpretor.VarConfig;
 using System;
 using System.Collections.Generic;
 
@@ -49,12 +46,12 @@ namespace LogicalSchemeInterpretor.ProgramManager
             List<ICommand> cmdList = _commandConfiguration.CommandList;
 
             ICommand startCommand = null;
-            foreach(ICommand command in cmdList)
+            foreach (ICommand command in cmdList)
             {
-                if(command.CommandType is Eticheta)
+                if (command.CommandType is Eticheta)
                 {
                     Eticheta start = (Eticheta)(command.CommandType);
-                    if(start.Name == "Start")
+                    if (start.Name == "Start")
                     {
                         startCommand = command;
                         return;
@@ -62,7 +59,7 @@ namespace LogicalSchemeInterpretor.ProgramManager
                 }
             }
 
-            if(startCommand == null)
+            if (startCommand == null)
             {
                 throw new Exception("Programul nu contine nicio eticheta cu numele de \"Start\"!");
             }
@@ -71,7 +68,7 @@ namespace LogicalSchemeInterpretor.ProgramManager
             ICommand programCounter = startCommand;
 
             // pornind din start, iteram
-            while(programCounter != null)
+            while (programCounter != null)
             {
                 try
                 {
