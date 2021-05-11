@@ -31,11 +31,11 @@ namespace LogicalSchemeInterpretor
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.flowLayoutPanelBlocks = new System.Windows.Forms.FlowLayoutPanel();
-            this.richTextBoxConsole = new System.Windows.Forms.RichTextBox();
-            this.flowLayoutPanelVariables = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBoxConsole = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanelVariables = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelDrawing = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,29 +57,6 @@ namespace LogicalSchemeInterpretor
             this.flowLayoutPanelBlocks.Name = "flowLayoutPanelBlocks";
             this.flowLayoutPanelBlocks.Size = new System.Drawing.Size(310, 935);
             this.flowLayoutPanelBlocks.TabIndex = 0;
-            // 
-            // richTextBoxConsole
-            // 
-            this.richTextBoxConsole.BackColor = System.Drawing.Color.LightGray;
-            this.richTextBoxConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richTextBoxConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxConsole.ForeColor = System.Drawing.Color.Navy;
-            this.richTextBoxConsole.Location = new System.Drawing.Point(310, 745);
-            this.richTextBoxConsole.Margin = new System.Windows.Forms.Padding(10);
-            this.richTextBoxConsole.Name = "richTextBoxConsole";
-            this.richTextBoxConsole.Size = new System.Drawing.Size(1414, 190);
-            this.richTextBoxConsole.TabIndex = 1;
-            this.richTextBoxConsole.Text = "";
-            // 
-            // flowLayoutPanelVariables
-            // 
-            this.flowLayoutPanelVariables.BackColor = System.Drawing.Color.DarkGray;
-            this.flowLayoutPanelVariables.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanelVariables.Location = new System.Drawing.Point(1427, 0);
-            this.flowLayoutPanelVariables.Name = "flowLayoutPanelVariables";
-            this.flowLayoutPanelVariables.Size = new System.Drawing.Size(297, 745);
-            this.flowLayoutPanelVariables.TabIndex = 3;
             // 
             // panel5
             // 
@@ -113,6 +90,29 @@ namespace LogicalSchemeInterpretor
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyControl_MouseMove);
+            // 
+            // richTextBoxConsole
+            // 
+            this.richTextBoxConsole.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBoxConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richTextBoxConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxConsole.ForeColor = System.Drawing.Color.Navy;
+            this.richTextBoxConsole.Location = new System.Drawing.Point(310, 745);
+            this.richTextBoxConsole.Margin = new System.Windows.Forms.Padding(10);
+            this.richTextBoxConsole.Name = "richTextBoxConsole";
+            this.richTextBoxConsole.Size = new System.Drawing.Size(1414, 190);
+            this.richTextBoxConsole.TabIndex = 1;
+            this.richTextBoxConsole.Text = "";
+            // 
+            // flowLayoutPanelVariables
+            // 
+            this.flowLayoutPanelVariables.BackColor = System.Drawing.Color.DarkGray;
+            this.flowLayoutPanelVariables.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanelVariables.Location = new System.Drawing.Point(1427, 0);
+            this.flowLayoutPanelVariables.Name = "flowLayoutPanelVariables";
+            this.flowLayoutPanelVariables.Size = new System.Drawing.Size(297, 745);
+            this.flowLayoutPanelVariables.TabIndex = 3;
             // 
             // panel3
             // 
