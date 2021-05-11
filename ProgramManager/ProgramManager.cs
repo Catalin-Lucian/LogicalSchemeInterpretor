@@ -73,10 +73,18 @@ namespace LogicalSchemeInterpretor.ProgramManager
             // pornind din start, iteram
             while(programCounter != null)
             {
-                _currentCommand = programCounter;
-                programCounter.Execute();
-                bool isNextTrue = programCounter.CommandType.GetNext();
-                programCounter = _commandConfiguration.GetNextElement(programCounter, isNextTrue);
+                try
+                {
+                    _currentCommand = programCounter;
+                    programCounter.Execute();
+                    bool isNextTrue = programCounter.CommandType.GetNext();
+                    programCounter = _commandConfiguration.GetNextElement(programCounter, isNextTrue);
+                }
+                catch (Exception ex)
+                {
+                    // add command responsable for exception
+                    throw new Exception(_currentCommand.ToString() + " has generated: " + ex.Message);
+                }
             }
 
             _currentCommand = null;
