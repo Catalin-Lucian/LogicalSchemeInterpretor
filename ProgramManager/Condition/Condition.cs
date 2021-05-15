@@ -1,4 +1,7 @@
-﻿namespace LogicalSchemeInterpretor
+﻿using LogicalSchemeInterpretor.Expressions;
+using LogicalSchemeInterpretor.Operations;
+
+namespace LogicalSchemeInterpretor.Conditions
 {
     class Condition : ICondition
     {
@@ -34,6 +37,12 @@
         public bool ExecuteCondition()
         {
             return RelationalOperator.ExecuteCondition(FirstExpression, SecondExpression);
+        }
+
+
+        public override string ToString()
+        {
+            return  _firstExpression.ToString() + " " + _relationalOperator.Operator_ + " " + _secondExpression.ToString();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿using LogicalSchemeInterpretor.Commands;
+using LogicalSchemeInterpretor.CommandTypes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,19 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.CommandConfig
 {
     class CommandGraph : ICommandConfiguration
     {
-        private Hashtable _graph;
+        private Dictionary<ICommand, ICommand[]> _graph;
 
-        public Hashtable Graph {
+        public CommandGraph()
+        {
+            _graph = new Dictionary<ICommand, ICommand[]>();
+        }
+
+        public Dictionary<ICommand, ICommand[]> Graph {
             get => _graph;
         }
         public List<ICommand> CommandList {
             get {
-                List<ICommand> myList = (List<ICommand>)_graph.Keys;
-                return myList;
+                return _graph.Keys.ToList<ICommand>();
+            }
+        }
+
+        public ICommand StartPoint {
+            get
+            {
+                foreach(ICommand cmd in CommandList)
+                {
+                    if(cmd.CommandType is Eticheta)
+                    {
+                        Eticheta start = (Eticheta)cmd.CommandType;
+                        if(start.Name == "Start")
+                        {
+                            return cmd;
+                        }
+                    }
+                    
+                }
+                return null;
             }
         }
 
@@ -26,7 +50,7 @@ namespace LogicalSchemeInterpretor
         {
             if (!_graph.ContainsKey(command))
             {
-                _graph.Add(command, new Tuple<ICommand, ICommand>(null, null));
+                _graph.Add(command, new ICommand[2]);
             }
         }
 
@@ -34,22 +58,23 @@ namespace LogicalSchemeInterpretor
         {
             if (_graph.ContainsKey(father))
             {
-                Tuple<ICommand, ICommand> element = (Tuple<ICommand, ICommand>)_graph[father];
-                Tuple<ICommand, ICommand> elementNew = new Tuple<ICommand, ICommand>(firstSon, element.Item2);
-                _graph.Remove(father);
-                _graph.Add(father, elementNew);
+                _graph[father][0] = firstSon;
+            }
+            else
+            {
+                throw new Exception("Command Configuration nu contine cheia data!");
             }
         }
 
         public void BindElementSecond(ICommand father, ICommand secondSon)
         {
-
             if (_graph.ContainsKey(father))
             {
-                Tuple<ICommand, ICommand> element = (Tuple<ICommand, ICommand>)_graph[father];
-                Tuple<ICommand, ICommand> elementNew = new Tuple<ICommand, ICommand>(element.Item1, secondSon);
-                _graph.Remove(father);
-                _graph.Add(father, elementNew);
+                _graph[father][1] = secondSon;
+            }
+            else
+            {
+                throw new Exception("Command Configuration nu contine cheia data!");
             }
         }
 
@@ -61,9 +86,8 @@ namespace LogicalSchemeInterpretor
 
         public ICommand GetNextElement(ICommand key, bool isNextTrue)
         {
-            Tuple<ICommand, ICommand> element = (Tuple<ICommand, ICommand>)Graph[key];
-            if (isNextTrue) return element.Item1;
-            else return element.Item2;
+            if (isNextTrue) return _graph[key][0];
+            else return _graph[key][1];
         }
 
     }

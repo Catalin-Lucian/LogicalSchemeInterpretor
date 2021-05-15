@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using LogicalSchemeInterpretor.Expressions;
+using System.Collections.Generic;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.VarConfig
 {
     class GlobalVariables : IVariableConfiguration
     {
         private List<Variable> _listOfVariables;
+
+        public GlobalVariables()
+        {
+            _listOfVariables = new List<Variable>();
+        }
         public List<Variable> VariableList {
             get{
                 return _listOfVariables;
@@ -31,5 +37,12 @@ namespace LogicalSchemeInterpretor
             _listOfVariables.Remove(variable);
         }
 
+        public void ResetVariables()
+        {
+            foreach(Variable var in _listOfVariables)
+            {
+                var.Value = 0;
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor
+﻿namespace LogicalSchemeInterpretor.Conditions
 {
     public interface ICondition
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.Expressions
 {
     public class Variable : IExpression
     {
@@ -10,6 +10,7 @@ namespace LogicalSchemeInterpretor
         public Variable(String name)
         {
             _name = name;
+            _value = 0;
         }
 
         public double Value
@@ -28,5 +29,9 @@ namespace LogicalSchemeInterpretor
         {
             return Value;
         }
+
+        public override string ToString() {
+            return _name;
+        }  
     }
 }

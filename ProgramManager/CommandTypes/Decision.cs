@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LogicalSchemeInterpretor
+﻿using LogicalSchemeInterpretor.Conditions;
+using System;
+namespace LogicalSchemeInterpretor.CommandTypes
 {
     class Decision : ICommandType
     {
@@ -30,6 +26,11 @@ namespace LogicalSchemeInterpretor
         public bool GetNext()
         {
             return _nextElement;
+        }
+
+        public override string ToString()
+        {
+            return "Decision( " + _condition.ToString() + " )";
         }
     }
 }

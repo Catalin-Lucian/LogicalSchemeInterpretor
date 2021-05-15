@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor
+﻿namespace LogicalSchemeInterpretor.Conditions
 {
     class ConstCondition : ICondition
     {
@@ -17,6 +17,11 @@
         public bool ExecuteCondition()
         {
             return Value;
+        }
+
+        public override string ToString()
+        {
+            return _value.ToString();
         }
     }
 }

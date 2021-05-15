@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.CommandTypes
 {
     class Eticheta : ICommandType
     {
@@ -29,6 +25,11 @@ namespace LogicalSchemeInterpretor
         public bool GetNext()
         {
             return true;
+        }
+
+        public override string ToString()
+        {
+            return "Eticheta( " + _name + " )";
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor
+﻿namespace LogicalSchemeInterpretor.Expressions
 {
     public class ConstValue : IExpression
     {
@@ -18,6 +18,11 @@
         public double Execute()
         {
             return _value;
+        }
+
+        public override string ToString()
+        {
+            return  _value.ToString();
         }
     }
 }

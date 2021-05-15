@@ -1,4 +1,6 @@
-﻿namespace LogicalSchemeInterpretor
+﻿using LogicalSchemeInterpretor.Operations;
+
+namespace LogicalSchemeInterpretor.Expressions
 {
     class Expression : IExpression
     {
@@ -28,6 +30,11 @@
         public double Execute()
         {
             return _operator.ExecuteOperation(FirstTerm, SecondTerm);
+        }
+
+        public override string ToString()
+        {
+            return "(" + _firstTerm.ToString() + " " + _operator.Operator_ + " " + _secondTerm.ToString() + ")";
         }
     }
 }

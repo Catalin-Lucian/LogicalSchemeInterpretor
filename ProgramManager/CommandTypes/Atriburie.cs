@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace LogicalSchemeInterpretor
+using LogicalSchemeInterpretor.Expressions;
+
+namespace LogicalSchemeInterpretor.CommandTypes
 {
     class Atribuire : ICommandType
     {
@@ -37,6 +35,11 @@ namespace LogicalSchemeInterpretor
         public bool GetNext()
         {
             return true;
+        }
+
+        public override string ToString()
+        {
+            return "Atribuire( " + _variabila.Name + " = " + _expresie.ToString() + " )";
         }
     }
 }

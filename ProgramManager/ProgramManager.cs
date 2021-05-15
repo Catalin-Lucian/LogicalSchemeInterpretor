@@ -1,7 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LogicalSchemeInterpretor.CommandConfig;
+using LogicalSchemeInterpretor.Commands;
+using LogicalSchemeInterpretor.CommandTypes;
+using LogicalSchemeInterpretor.VarConfig;
+using System;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.ProgramManagerEntity
 {
     public class ProgramManager
     {
@@ -41,40 +44,36 @@ namespace LogicalSchemeInterpretor
 
         public void RunProgram()
         {
-            // se cauta eticheta cu numele "Start"
-            List<ICommand> cmdList = _commandConfiguration.CommandList;
+            // eticheta cu numele Start
+            ICommand startCommand = _commandConfiguration.StartPoint;
 
-            ICommand startCommand = null;
-            foreach (ICommand command in cmdList)
-            {
-                if (command.CommandType is Eticheta)
-                {
-                    Eticheta start = (Eticheta)(command.CommandType);
-                    if (start.Name == "Start")
-                    {
-                        startCommand = command;
-                        return;
-                    }
-                }
-            }
-
-            if (startCommand == null)
+            if(startCommand == null)
             {
                 throw new Exception("Programul nu contine nicio eticheta cu numele de \"Start\"!");
             }
+
+            // se reseteaza toate variabilele la 0
+            _variableConfiguration.ResetVariables();
 
             // se realizeaza iterarea prin program
             ICommand programCounter = startCommand;
 
             // pornind din start, iteram
-            while (programCounter != null)
+            while(programCounter != null)
             {
                 try
                 {
+
+                    // a se sterge 
+                    Console.WriteLine("Se executa comanda: " + programCounter.CommandType.ToString());
+
                     _currentCommand = programCounter;
                     programCounter.Execute();
+                    
                     bool isNextTrue = programCounter.CommandType.GetNext();
                     programCounter = _commandConfiguration.GetNextElement(programCounter, isNextTrue);
+
+
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +81,7 @@ namespace LogicalSchemeInterpretor
                     throw new Exception(_currentCommand.ToString() + " has generated: " + ex.Message);
                 }
             }
+            Console.WriteLine("Executie incheiata.");
 
             _currentCommand = null;
         }

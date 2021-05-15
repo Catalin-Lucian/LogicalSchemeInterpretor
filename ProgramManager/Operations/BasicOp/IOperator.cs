@@ -1,4 +1,6 @@
-﻿namespace LogicalSchemeInterpretor
+﻿using LogicalSchemeInterpretor.Expressions;
+
+namespace LogicalSchemeInterpretor.Operations
 {
     public interface IOperator
     {

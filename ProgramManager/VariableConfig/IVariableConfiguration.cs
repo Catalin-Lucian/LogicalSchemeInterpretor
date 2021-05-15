@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using LogicalSchemeInterpretor.Expressions;
+using System.Collections.Generic;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.VarConfig
 {
     public interface IVariableConfiguration
     {
@@ -11,6 +12,8 @@ namespace LogicalSchemeInterpretor
         {
             get;
         }
+        public void ResetVariables();
+
 
     }
 }

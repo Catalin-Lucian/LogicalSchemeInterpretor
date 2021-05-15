@@ -1,6 +1,7 @@
-﻿using System;
+﻿using LogicalSchemeInterpretor.Expressions;
+using System;
 
-namespace LogicalSchemeInterpretor
+namespace LogicalSchemeInterpretor.Operations
 {
     public class Operator : IOperator
     {
@@ -32,5 +33,6 @@ namespace LogicalSchemeInterpretor
                     return 0;
             }
         }
+
     }
 }

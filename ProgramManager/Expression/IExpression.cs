@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor
+﻿namespace LogicalSchemeInterpretor.Expressions
 {
     public interface IExpression
     {

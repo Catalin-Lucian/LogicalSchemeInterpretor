@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor
+﻿namespace LogicalSchemeInterpretor.Conditions
 {
     class NegCondition : ICondition
     {
@@ -18,6 +18,11 @@
         public bool ExecuteCondition()
         {
             return !Condition.ExecuteCondition();
+        }
+
+        public override string ToString()
+        {
+            return "!(" + _condition.ToString() + ")";
         }
     }
 }
