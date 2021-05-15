@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor.Conditions
+﻿namespace LogicalSchemeInterpretor
 {
     class ConstCondition : ICondition
     {

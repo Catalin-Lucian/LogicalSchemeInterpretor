@@ -1,9 +1,5 @@
 ﻿
-
-using LogicalSchemeInterpretor.Expressions;
-
-namespace LogicalSchemeInterpretor.CommandTypes
-{
+namespace LogicalSchemeInterpretor { 
     class Atribuire : ICommandType
     {
         private Variable _variabila;

@@ -1,7 +1,7 @@
-﻿using LogicalSchemeInterpretor.Expressions;
+﻿
 using System;
 
-namespace LogicalSchemeInterpretor.Operations
+namespace LogicalSchemeInterpretor
 {
     class RelationalOperator : IRelationalOperator
     {

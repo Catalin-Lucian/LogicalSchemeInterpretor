@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LogicalSchemeInterpretor.Expressions
+namespace LogicalSchemeInterpretor
 {
     public class Variable : IExpression
     {

@@ -1,4 +1,4 @@
-﻿namespace LogicalSchemeInterpretor.Expressions
+﻿namespace LogicalSchemeInterpretor
 {
     public class ConstValue : IExpression
     {

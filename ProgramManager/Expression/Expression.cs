@@ -1,6 +1,5 @@
-﻿using LogicalSchemeInterpretor.Operations;
-
-namespace LogicalSchemeInterpretor.Expressions
+﻿
+namespace LogicalSchemeInterpretor
 {
     class Expression : IExpression
     {

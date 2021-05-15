@@ -1,6 +1,6 @@
 ﻿
 
-namespace LogicalSchemeInterpretor.CommandTypes
+namespace LogicalSchemeInterpretor
 {
     class Eticheta : ICommandType
     {

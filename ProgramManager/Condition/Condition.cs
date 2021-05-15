@@ -1,7 +1,5 @@
-﻿using LogicalSchemeInterpretor.Expressions;
-using LogicalSchemeInterpretor.Operations;
-
-namespace LogicalSchemeInterpretor.Conditions
+﻿
+namespace LogicalSchemeInterpretor
 {
     class Condition : ICondition
     {

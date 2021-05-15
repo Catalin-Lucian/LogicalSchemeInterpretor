@@ -1,6 +1,6 @@
-﻿using LogicalSchemeInterpretor.Conditions;
+﻿
 using System;
-namespace LogicalSchemeInterpretor.CommandTypes
+namespace LogicalSchemeInterpretor
 {
     class Decision : ICommandType
     {

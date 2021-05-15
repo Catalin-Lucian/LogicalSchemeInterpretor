@@ -1,7 +1,7 @@
-﻿using LogicalSchemeInterpretor.Expressions;
+﻿
 using System;
 
-namespace LogicalSchemeInterpretor.Operations
+namespace LogicalSchemeInterpretor
 {
     public class Operator : IOperator
     {

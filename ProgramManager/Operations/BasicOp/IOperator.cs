@@ -1,6 +1,6 @@
-﻿using LogicalSchemeInterpretor.Expressions;
+﻿
 
-namespace LogicalSchemeInterpretor.Operations
+namespace LogicalSchemeInterpretor
 {
     public interface IOperator
     {

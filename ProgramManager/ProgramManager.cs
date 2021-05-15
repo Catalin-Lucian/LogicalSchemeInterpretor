@@ -1,10 +1,6 @@
-﻿using LogicalSchemeInterpretor.CommandConfig;
-using LogicalSchemeInterpretor.Commands;
-using LogicalSchemeInterpretor.CommandTypes;
-using LogicalSchemeInterpretor.VarConfig;
-using System;
+﻿using System;
 
-namespace LogicalSchemeInterpretor.ProgramManagerEntity
+namespace LogicalSchemeInterpretor
 {
     public class ProgramManager
     {
@@ -65,7 +61,7 @@ namespace LogicalSchemeInterpretor.ProgramManagerEntity
                 {
 
                     // a se sterge 
-                    Console.WriteLine("Se executa comanda: " + programCounter.CommandType.ToString());
+                    //Console.WriteLine("Se executa comanda: " + programCounter.CommandType.ToString());
 
                     _currentCommand = programCounter;
                     programCounter.Execute();
@@ -81,7 +77,7 @@ namespace LogicalSchemeInterpretor.ProgramManagerEntity
                     throw new Exception(_currentCommand.ToString() + " has generated: " + ex.Message);
                 }
             }
-            Console.WriteLine("Executie incheiata.");
+            //Console.WriteLine("Executie incheiata.");
 
             _currentCommand = null;
         }

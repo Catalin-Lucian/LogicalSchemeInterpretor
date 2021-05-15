@@ -1,7 +1,6 @@
-﻿using LogicalSchemeInterpretor.Expressions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace LogicalSchemeInterpretor.VarConfig
+namespace LogicalSchemeInterpretor
 {
     class GlobalVariables : IVariableConfiguration
     {
