@@ -1,8 +1,6 @@
-﻿using LogicalSchemeInterpretor.Observer;
-using System;
-using System.Collections.Generic;
+﻿using System;
 
-namespace LogicalSchemeInterpretor.Terminal
+namespace LogicalSchemeInterpretor
 {
     class ConsoleObject : ITerminalEntity, IObserver
     {

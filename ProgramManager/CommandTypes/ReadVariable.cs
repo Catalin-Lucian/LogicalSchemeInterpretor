@@ -1,7 +1,6 @@
-﻿using LogicalSchemeInterpretor.Expressions;
-using LogicalSchemeInterpretor.Terminal;
+﻿
 
-namespace LogicalSchemeInterpretor.CommandTypes
+namespace LogicalSchemeInterpretor
 {
     class ReadVariable : ICommandType
     {

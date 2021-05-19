@@ -52,7 +52,7 @@ namespace LogicalSchemeInterpretor
         Panel copyPanel;
         private void PanelCommand_Click(object sender, System.EventArgs e)
         {
-            copyPanel=sender.clone
+            copyPanel = sender.clone;
         }
     }
 }

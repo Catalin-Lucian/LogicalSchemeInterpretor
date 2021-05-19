@@ -1,9 +1,9 @@
-﻿using LogicalSchemeInterpretor.Observer;
+﻿
 using System;
 
-namespace LogicalSchemeInterpretor.CommandTypes
+namespace LogicalSchemeInterpretor
 {
-    class WriteText : ICommandType, ITerminalEntity
+    class WriteText : ICommandType, IObservable
     {
         private string _text;
         private IObserver _afisareObserver;

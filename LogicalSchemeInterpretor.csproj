@@ -78,6 +78,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgramManager\Observer\IObservable.cs" />
+    <Compile Include="ProgramManager\Observer\IObserver.cs" />
     <Compile Include="ProgramManager\Operations\BasicOp\IOperator.cs" />
     <Compile Include="ProgramManager\Operations\BasicOp\Operator.cs" />
     <Compile Include="ProgramManager\Operations\RelationalOp\IRelationalOperator.cs" />

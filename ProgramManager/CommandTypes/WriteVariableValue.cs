@@ -1,10 +1,8 @@
-﻿using LogicalSchemeInterpretor.Expressions;
-using LogicalSchemeInterpretor.Observer;
-using System;
+﻿using System;
 
-namespace LogicalSchemeInterpretor.CommandTypes
+namespace LogicalSchemeInterpretor
 {
-    class WriteVariableValue : ICommandType, ITerminalEntity
+    class WriteVariableValue : ICommandType, IObservable
     {
         private Variable _internalVar;
         private IObserver _afisareObserver;
