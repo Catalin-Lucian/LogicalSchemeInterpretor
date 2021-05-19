@@ -47,5 +47,12 @@ namespace LogicalSchemeInterpretor
         {
             System.Console.WriteLine("focused");
         }
+
+
+        Panel copyPanel;
+        private void PanelCommand_Click(object sender, System.EventArgs e)
+        {
+            copyPanel=sender.clone
+        }
     }
 }

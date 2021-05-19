@@ -116,7 +116,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\backiee-113541.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Icons\background.png" />
   </ItemGroup>
