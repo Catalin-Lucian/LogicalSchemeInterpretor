@@ -1,11 +1,12 @@
-﻿using System.Drawing;
+﻿using LogicalSchemeManager;
+using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Input;
 
 namespace LogicalSchemeInterpretor
 {
     public partial class Form1 : Form
     {
+        private ProgramManager _programManager;
 
         bool clicked = false;
         public Form1()
@@ -52,7 +53,8 @@ namespace LogicalSchemeInterpretor
         Panel copyPanel;
         private void PanelCommand_Click(object sender, System.EventArgs e)
         {
-            copyPanel = sender.clone;
+            //copyPanel = sender.clon;
         }
+
     }
 }
