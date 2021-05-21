@@ -1,7 +1,3 @@
 # ----------------LogicalSchemeInterpretor--------------------
 
-# THINGS DONE:
-- Expression
-- BasicOP
-- RelationalOP
-- Condition
+# project moved to https://github.com/vladbatalan/LogicallyInterpretor
